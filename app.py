@@ -14,12 +14,12 @@ if st.sidebar.button('Exemplo Gráfico de Barras'):
     df1.rename(columns={'Estado - Sigla':'UF', 'Valor de Venda':'Valor Médio de Venda'},inplace=True)
     st.bar_chart(df1[['UF', 'Valor Médio de Venda']], x='UF', y='Valor Médio de Venda', color='#008000', use_container_width=True)
 
-opcao = st.radio(
+opcao = st.sidebar.radio(
     'Selecionar uma opcao: ',
     ('Opção 1', 'Opção 2')
 )
 
 if opcao == 'Opção 1':
-    st.write('Selecionado a opção 1')
+    st.sidebar.write('Selecionado a opção 1')
 elif opcao == 'Opção 2':
-    st.write('Selecionado a opção 2')
+    st.sidebar.write('Selecionado a opção 2')
