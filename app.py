@@ -14,6 +14,8 @@ if st.sidebar.button('Exemplo Gráfico de Barras'):
     df1.rename(columns={'Estado - Sigla':'UF', 'Valor de Venda':'Valor Médio de Venda'},inplace=True)
     st.bar_chart(df1[['UF', 'Valor Médio de Venda']], x='UF', y='Valor Médio de Venda', color='#008000', use_container_width=True)
 
+### Lista de Opções no Sidebar 
+st.sidebar.title('Lista de Opções')
 opcao = st.sidebar.radio(
     'Selecionar uma opcao: ',
     ('Opção 1', 'Opção 2')
